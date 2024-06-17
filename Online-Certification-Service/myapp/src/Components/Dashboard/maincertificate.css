@@ -1,0 +1,235 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.background {
+  background-color: whitesmoke;
+  padding-bottom:5%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.inputfieldContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image {
+  height: 25vh;
+  width: 100vw;
+  object-fit: cover;
+}
+.errorMessage{
+  color:red;
+  font-weight: bold;
+  text-align: left;
+}
+.btnContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:3%;
+}
+.card {
+  border: 3px solid blue;
+  height: auto;
+  width:80vw;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 5%;
+}
+
+.flexcard {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.head{
+  color: rgb(67, 72, 165);
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom:40px;
+  width: 270px;
+}
+
+.usernamecontainer {
+  width: 400px;
+}
+
+.namecontainer {
+  width: 300px;
+}
+
+#inputField {
+  border: 2.5px solid rgb(0, 0, 0);
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: black;
+  font-size: 15px;
+  font-weight: 450;
+  outline: none;
+  caret-color: rgb(247, 1, 1);;
+  transition-duration: .3s;
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.userIcon {
+  position: absolute;
+  fill: rgb(247, 1, 1);
+  width: 12px;
+  top: -23px;
+  left: -15px;
+  opacity: 0;
+  transition: .2s linear;
+}
+.dateContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dateInput{
+  width:280px;
+  padding:10px;
+  color:black;
+  border-radius: bold;
+  border-radius:15px;
+}
+input::placeholder{
+  color:black;
+  font-weight:400;
+}
+.usernameLabel {
+  position: absolute;
+  top: -25px;
+  left: 5px;
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  transition: .2s linear;
+  opacity: 0;
+}
+
+#inputField:focus ~ .usernameLabel,
+#inputField:valid ~ .usernameLabel {
+  transform: translateX(20px);
+  opacity: 1;
+}
+
+#inputField:focus ~ .userIcon,
+#inputField:valid ~ .userIcon {
+  transform: translateX(20px);
+  opacity: 1;
+}
+
+#inputField:focus,
+#inputField:valid{
+  background-color:#E8F0FE;
+  transition-duration: .3s;
+  border-color: blue;
+}
+.droplabel{
+  color:black;
+  font-weight:600;
+}
+
+.dropdown {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.dropdownsContainer{
+  margin-left:5%;
+}
+
+.dropdown-select {
+  appearance: none;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+  border: 2.5px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  width: 300px;
+  transition: background-color 0.3s;
+}
+
+.dropdownSelected
+{
+  border:2.5px solid blue;
+  background-color: #E8F0FE;
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+      width: 90%;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .usernamecontainer,
+  .namecontainer {
+      width: 100%;
+      margin-top:5%;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .card {
+      padding:10%;
+  }
+  .inputfieldContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .namecontainer {
+      width: 250px;
+  }
+  .usernamecontainer {
+      width: 250px;
+  }
+  .inputContainer {
+      margin-bottom: 20px;
+  }
+  .dropdown select{
+    width:250px;
+  }
+  .dropdown-container {
+      margin-bottom: 15px;
+      margin-left: 0%;
+  }
+}
